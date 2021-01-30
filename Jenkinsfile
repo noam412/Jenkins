@@ -1,7 +1,6 @@
 node {
-	properties([pipelineTriggers([githubPush()])])
 
 	stage("print whatEver"){
-		sh 'echo "Test webhook 12"'
+		sh 'echo "Test webhook 11"'
 	}
 }
