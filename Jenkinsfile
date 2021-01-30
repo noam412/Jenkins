@@ -1,9 +1,16 @@
 pipeline {
-	node("kubernetes")
-	{
-		stages{
-			stage("print whatEver"){
-						sh 'echo "Test webhook 11"'
-		 	}			}
-	}
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+                // 
+            }
+        }
+        stage('Test') { 
+            steps {
+                sh 'echo shit' 
+            }
+        }
+       
+    }
 }
