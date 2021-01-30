@@ -1,7 +1,9 @@
-node("kubernetes")
-{
+pipeline {
+	node("kubernetes")
+	{
+		stages{
 			stage("print whatEver"){
-				sh 'echo "Test webhook 11"'
-			}
+						sh 'echo "Test webhook 11"'
+		 	}			}
+	}
 }
-
