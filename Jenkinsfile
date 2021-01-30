@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                   sh 'echo noam'  
+                   sh 'whoami'  
             }
         }
         stage('Test') { 
