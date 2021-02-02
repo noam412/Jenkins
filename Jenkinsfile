@@ -4,10 +4,12 @@ pipeline {
         stage('Build') { 
             steps {
                 script {
-                   def maven = docker.image('maven:latest')
-                    maven.pull() // make sure we have the latest available from Docker Hub
-                    maven.inside {
-                      sh 'whoami'
+                   def centos = docker.image('centos')
+                    centos.pull() // make sure we have the latest available from Docker Hub
+                    centos.inside {
+                          sh 'mkdir /sharon_homo'
+                          sh 'ls -l /'
+
                     } 
                 }
              }
