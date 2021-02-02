@@ -8,7 +8,8 @@ pipeline {
                     centos.pull() // make sure we have the latest available from Docker Hub
                     centos.inside {
                           sh 'mkdir sharon_homo'
-                          sh 'ls -l /'
+                          sh 'pwd'
+                          sh 'ls -l $(pwd)'
 
                     } 
                 }
