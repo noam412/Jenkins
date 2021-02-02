@@ -8,7 +8,7 @@ pipeline {
                     centos.pull() // make sure we have the latest available from Docker Hub
                     centos.inside {
                           sh 'hostname'
-                          sh 'pwd'
+                          sh 'whoami'
                           sh 'ls -l $(pwd)'
 
                     } 
